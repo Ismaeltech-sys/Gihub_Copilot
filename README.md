@@ -31,11 +31,15 @@
         ▪ Preguntar (Ask): El modo más básico para conversar.
         ▪ Editar (Edit): Permite a Copilot editar el fichero directamente, sin necesidad de copiar y pegar el código. Puedes pedirle que refactorice, elimine funcionalidades, mejore rendimiento, estilo, o traduzca código a otro lenguaje. Es importante leer lo que Copilot va explicando en el chat.
         ▪ Agente (Agent): La modalidad más avanzada y proactiva, similar a un asistente autónomo. Es capaz de iterar sobre sus propias respuestas, ejecutar múltiples pasos de razonamiento, corregirse a sí mismo, y tener un contexto más amplio del proyecto. Puede realizar acciones combinadas (analizar y generar código, detectar errores) e interactuar con la terminal y lanzar comandos directamente (requiere confirmación por seguridad).
+   
     ◦ Contexto del Chat: Por defecto, Copilot tiene el contexto del fichero activo. Puedes deshabilitarlo, seleccionar líneas específicas o añadir más ficheros, carpetas o instrucciones para ampliar el contexto.
+   
     ◦ Comandos (/): Ofrece acciones predefinidas para ayudar con el código, como explain (explicar código activo), fix (solucionar problemas), test (generar pruebas). Puedes dar instrucciones extra a los comandos (ej., explain en español).
+   
     ◦ Extensiones de Contexto:
         ▪ @: Permite hacer preguntas sobre todo el proyecto (@workspace) y elegir contextos generales como GitHub, la Terminal o Visual Studio Code.
         ▪ #: Llevan las funciones de contexto a un nivel superior, permitiendo referencias más concretas sobre cómo debe comportarse Copilot.
+   
     ◦ MCP (Model Context Protocol): Un estándar abierto para unificar la conexión de modelos de lenguaje con datos y herramientas externas de forma segura. Permite a Copilot acceder a información de herramientas externas como GitHub, Figma, Notion, Stripe, PayPal, Azure, etc., extendiendo su contexto más allá de tu código local.
 
 ## Instrucciones Generales y Buenas Prácticas:
