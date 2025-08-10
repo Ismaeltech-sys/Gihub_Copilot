@@ -109,3 +109,70 @@ audio {
         0 15px 30px rgba(0, 0, 0, 0.4),
         inset 0 0 30px rgba(255, 255, 255, 0.15);
 }
+
+/* Efecto de zoom al pasar el ratón */
+.hover-zoom {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.2); /* Amplía la imagen al 120% */
+}
+
+/* Estilo general para el contenedor de la imagen */
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* Estilo para los títulos del artículo */
+.text-content h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-content h2 {
+    font-size: 2em;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el texto */
+.text-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Contenedor para el efecto lupa */
+.magnifier-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* Imagen dentro del contenedor lupa */
+#magnify-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease, transform-origin 0.2s ease;
+}

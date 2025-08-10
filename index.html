@@ -10,7 +10,7 @@
     <div class="background-3d"></div>
     <div class="audio-container">
         <audio controls>
-            <source src="Media/Github and Git Essentials.mp3" type="audio/mpeg">
+            <source src="Media/GitHub_Copilot Y Visual studio Code.mp3.m4a" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
     </div>
@@ -18,8 +18,85 @@
     <hr class="separator">
     <hr class="separator">
 
+    <!-- Imagen con efecto lupa -->
     <div class="pdf-container">
-        <img src="./Media/GITHUB Y GIT.webp" alt="Cheatsheet GitHub" class="pdf-viewer">
+        <div class="magnifier-container">
+            <img src="Media/GitHub_Copilot_map.png" alt="Mapa de GitHub Copilot" id="magnify-image">
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para el efecto lupa
+        const magnifyImage = document.getElementById('magnify-image');
+        const magnifierContainer = document.querySelector('.magnifier-container');
+
+        magnifierContainer.addEventListener('mousemove', function (e) {
+            const rect = magnifyImage.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const offsetX = (x / rect.width) * 100;
+            const offsetY = (y / rect.height) * 100;
+
+            magnifyImage.style.transformOrigin = `${offsetX}% ${offsetY}%`;
+            magnifyImage.style.transform = 'scale(2)';
+        });
+
+        magnifierContainer.addEventListener('mouseleave', function () {
+            magnifyImage.style.transform = 'scale(1)';
+            magnifyImage.style.transformOrigin = 'center center';
+        });
+    </script>
+
+    <div class="container">
+        <!-- Caja del texto -->
+        <div class="box">
+            <article class="text-content">
+                <h1>Copilot en Visual Studio Code</h1>
+                <h2>Visión General de GitHub Copilot</h2>
+                <p>¿Qué es GitHub Copilot? Un asistente de código impulsado por inteligencia artificial generativa, el más utilizado en la actualidad. Propósito: Ayudar a los desarrolladores a escribir, explicar, completar, testear, documentar, desplegar código, mejorar el flujo de desarrollo y ahorrar tiempo.</p>
+                <p>Filosofía "Copiloto": El usuario (programador) es el "piloto" que dirige y toma las decisiones, mientras Copilot asiste y genera código bajo su supervisión. No reemplaza al programador.</p>
+                <p>Beneficios clave: Mayor eficiencia en el desarrollo de software, incluso para proyectos complejos.</p>
+                <p>Disponibilidad: Se puede utilizar de forma gratuita.</p>
+                <h2>Requisitos e Instalación</h2>
+                <p>Requisitos mínimos: Visual Studio Code (entorno de trabajo principal). Cuenta de GitHub.</p>
+                <p>Similitud con otras herramientas: Los conceptos y usos son aplicables a otros asistentes de código populares como Cursor o Winsurf.</p>
+                <p>Proceso de Instalación en Visual Studio Code: Ir a la sección de extensiones. Buscar y asegurar la instalación de las extensiones: "GitHub Copilot" y "GitHub Copilot Chat".</p>
+                <p>Autenticarse con la cuenta de GitHub. Ubicación de los iconos de Copilot tras la instalación: Parte superior: Acceso a herramientas diversas.</p>
+                <h2>Funcionalidades Principales</h2>
+                <p><strong>A. Autocompletado (Autocompletado de Código)</strong></p>
+                <p>Mecanismo: Analiza el contexto del fichero de código y sugiere autocompletado de código o funciones.</p>
+                <p>Activación: Escribir código o comentarios; Copilot sugiere.</p>
+                <p>Interacción: Aceptar sugerencia: Tecla Tab. Cancelar sugerencia: Tecla Escape.</p>
+                <p>Visualizar múltiples soluciones: Copilot puede sugerir varias opciones.</p>
+                <p>Aceptar por partes: Usar Control/Comando + flecha derecha para aceptar palabra por palabra.</p>
+                <p>Mejora de sugerencias: Refinar el comentario o el código para guiar a Copilot a generar resultados más precisos.</p>
+                <p>Beneficio: Agiliza el flujo de trabajo, permite enfocarse en el "qué" hacer (pensamiento abstracto) mientras Copilot se encarga del "cómo" (sintaxis exacta).</p>
+                <p><strong>B. Chat en Línea (Inline Chat)</strong></p>
+                <p>Acceso: Control/Comando + I desde cualquier parte del código.</p>
+                <p>Uso: Preguntas directas a Copilot usando lenguaje natural para generar código.</p>
+                <p><strong>C. Chat de Copilot (Copilot Chat)</strong></p>
+                <p>Descripción: El centro de conversación principal con el proyecto.</p>
+                <h2>Configuración Avanzada y Contexto Extendido</h2>
+                <p><strong>A. Instrucciones Generales</strong></p>
+                <p>Ubicación: Configuración de Copilot.</p>
+                <p>Propósito: Establecer reglas generales que aplican a la ejecución de Copilot para un comportamiento coherente.</p>
+                <p>Formato: Se escriben en lenguaje natural.</p>
+                <p>Ejemplos: "Siempre utilizar TypeScript", "emplear Astro para crear una web", "usar buenas prácticas", "refactorizar código siempre", "crear tests de funcionalidades principales".</p>
+                <p>Beneficio: Evita repetir reglas continuamente; Copilot lee el fichero de instrucciones por defecto.</p>
+                <p>Flexibilidad: Se pueden crear múltiples ficheros, relacionarlos, o hacer que cada uno funcione en un contexto diferente.</p>
+                <h2>Consejos y Buenas Prácticas</h2>
+                <p>Calidad de la entrada = Calidad de la salida: Los prompts (preguntas) deben ser específicos y claros. Evitar la vaguedad.</p>
+                <p>Tú eres el piloto: Siempre revisa el código generado por Copilot. Trátalo como un compañero rápido y conocedor, pero que puede cometer errores o carecer de contexto completo. El responsable final del código eres tú.</p>
+                <p>Atención a errores: Prestar especial atención a errores de lógica, seguridad, malas prácticas o código obsoleto que Copilot pueda generar.</p>
+                <p>Privacidad del código: Los datos se envían de forma segura y las sugerencias se descartan. No se almacenan permanentemente. Se puede configurar si GitHub puede usar fragmentos de código para mejorar el producto o desactivar esta opción.</p>
+                <p>Comenzar simple: Iniciar con tareas pequeñas y bien definidas para facilitar la revisión de resultados y mejorar la calidad del proyecto progresivamente.</p>
+                <p>No depender demasiado: Copilot no garantiza código perfecto ni te exime de aprender a programar y entender los fundamentos.</p>
+                <p>Cuidado al aprender: Diferenciar entre usar la IA para aprender y usarla para hacer "trampas" o saltarse pasos en el proceso de aprendizaje.</p>
+                <p>Experimentación: La mejor forma de aprender es instalando y probando Copilot en proyectos personales, experimentando con comandos y funcionalidades.</p>
+                <p>Documentación oficial: Consultar la documentación oficial para un conocimiento más profundo.</p>
+            </article>
+        </div>
     </div>
 </body>
 </html>
